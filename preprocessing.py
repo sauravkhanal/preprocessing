@@ -160,9 +160,9 @@ def segmentImage(image):
 
 def preprocess_multiple_folder(folder_path, final_img_size = (200,200), power_law=False, segment=True, log_transform=False): 
     list_of_dirs = os.listdir(folder_path)
-    print(" TOTAL NUMBER OF DIRECTORIES : " + str(len(list_of_dirs)) )
+    print("TOTAL NUMBER OF DIRECTORIES : " + str(len(list_of_dirs)) )
     for index,dirs in enumerate(list_of_dirs):
-        print("Processing directory" + str(index)+"/"+str(len(list_of_dirs)))
+        print("Processing directory " + str(index)+"/"+str(len(list_of_dirs)))
         path = os.path.join(folder_path, dirs)
         preprocess_single_folder(folder_path=path, save_folder_path=path, final_img_size = final_img_size, power_law=power_law, segment=segment, log_transform=log_transform)
 
