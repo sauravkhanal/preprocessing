@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
 import os
+from tqdm import tqdm
 
 def extract_signature_from_image(image_path,size = (200,200),margin = 5):
     image_name = (os.path.split(image_path))[1]
@@ -71,5 +72,5 @@ def extract_signature_from_image(image_path,size = (200,200),margin = 5):
 
 def extract_signature_from_directory(dir_path,size = (200,200),margin = 5):
     image_list = os.listdir(dir_path)
-    for image_name in image_list:
+    for image_name in tqdm(image_list):
         extract_signature_from_image(os.path.join(dir_path,image_name), size = size, margin = margin)
