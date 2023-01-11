@@ -22,7 +22,7 @@ def extract_signature_from_image(image_path,size = (200,200),margin = 5):
     x,y = (0,0)
     width = size[0] #width , x
     height = size[1] #height , y
-    desired_size = 200 #<----------------------------------------
+    desired_size = size[0]#<----------------------------------------
     index = 1 #for incrementing name of image
     # dir_made = False
     # adj = 0 # in order to adjust
