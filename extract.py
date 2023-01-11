@@ -72,5 +72,6 @@ def extract_signature_from_image(image_path,size = (200,200),margin = 5):
 
 def extract_signature_from_directory(dir_path,size = (200,200),margin = 5):
     image_list = os.listdir(dir_path)
+    image_list = [x for x in image_list if x.endswith('png') or x.endswith('PNG') or x.endswith('jpg') or x.endswith('JPG')]
     for image_name in tqdm(image_list):
         extract_signature_from_image(os.path.join(dir_path,image_name), size = size, margin = margin)
